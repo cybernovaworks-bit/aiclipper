@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Clipper - Viral Shorts Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-scissors"></i> AI Clipper
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Pricing</a>
+            <a href="#">Login</a>
+        </div>
+    </nav>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Turn long videos into <span class="highlight">viral shorts</span> instantly</h1>
+            <p>Paste a YouTube link below and our AI will find the best hooks, crop them, and add captions automatically.</p>
+
+            <div class="input-container">
+                <i class="fa-brands fa-youtube youtube-icon"></i>
+                <input type="text" id="youtube-url" placeholder="Paste YouTube link here (e.g., https://youtube.com/watch?v=...)">
+                <select id="subtitle-style" class="subtitle-selector">
+                    <option value="none">No Subtitles</option>
+                    <option value="viral_yellow" selected>Viral Yellow</option>
+                    <option value="classic_white">Classic White</option>
+                    <option value="neon_green">Neon Green</option>
+                    <option value="cinematic_box">Cinematic Box</option>
+                    <option value="bold_red">Bold Red</option>
+                    <option value="pop_art_pink">Pop Art Pink</option>
+                    <option value="hacker_terminal">Hacker Terminal</option>
+                    <option value="minimalist">Minimalist</option>
+                    <option value="blue_glow">Blue Glow</option>
+                    <option value="high_contrast">High Contrast</option>
+                </select>
+                <button id="generate-btn">
+                    <span class="btn-text">Generate</span>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </button>
+            </div>
+
+            <div id="status-message" class="hidden">
+                <div class="spinner"></div>
+                <p id="status-text">Analyzing video...</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="results-section hidden" id="results">
+        <h2>Generated Clips</h2>
+        <div class="clips-grid" id="clips-container">
+            <!-- Clips will be injected here via JS -->
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+yt-dlp
+openai-whisper
+ffmpeg-python
+moviepy
+pydantic
+python-multipart
+urllib3
