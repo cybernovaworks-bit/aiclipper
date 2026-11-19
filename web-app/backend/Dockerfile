@@ -22,9 +22,9 @@ COPY . .
 # Create necessary temp and static directories
 RUN mkdir -p temp static/clips
 
-# Make port 7860 available to the world outside this container (Hugging Face default)
-ENV PORT=7860
-EXPOSE 7860
+# Make port 8000 available to the world outside this container
+ENV PORT=8000
+EXPOSE 8000
 
 # Run uvicorn server
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

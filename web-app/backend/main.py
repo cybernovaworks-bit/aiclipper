@@ -172,6 +172,6 @@ async def process_video(request: VideoRequest):
 if __name__ == "__main__":
     import uvicorn
     import os
-    # Default to 7860 for Hugging Face Spaces, otherwise use the PORT environment variable
-    port = int(os.environ.get("PORT", 7860))
+    # Default to 8000 for Koyeb, otherwise use the PORT environment variable
+    port = int(os.environ.get("PORT", 8000))
     uvicorn.run("main:app", host="0.0.0.0", port=port)
